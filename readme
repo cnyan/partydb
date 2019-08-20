@@ -1,0 +1,11 @@
+python manage.py startapp pollapp
+
+# 在models.py中修改模型；
+# 运行python manage.py makemigrations为改动创建迁移记录；
+# 运行python manage.py migrate，将操作同步到数据库。
+python manage.py makemigrations pollapp  # 创建模型到数据库
+python manage.py migrate #将操作同步到数据库
+python manage.py sqlmigrate pollapp 0001  # 展示SQL语句
+
+
+python manage.py createsuperuser # 创建一个可以登录admin站点的用户  cnyan  123456
