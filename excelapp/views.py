@@ -79,6 +79,7 @@ def read_work1(request):
     da = {
         'code': '200',
         'msg': '成功',
+        'fill': 'E7:P9',
         'data': work_data.tolist()
     }
     return HttpResponse(json.dumps(da, ensure_ascii=False), content_type="application/json,charset=utf-8")
@@ -130,6 +131,7 @@ def read_work2(request):
     da = {
         'code': '200',
         'msg': '成功',
+        'fill': 'D8:V17',
         'data': work_data.tolist()
     }
     return HttpResponse(json.dumps(da, ensure_ascii=False), content_type="application/json,charset=utf-8")
@@ -181,6 +183,7 @@ def read_work3(request):
     da = {
         'code': '200',
         'msg': '成功',
+        'fill': 'D7:M10',
         'data': work_data.tolist()
         # 'data': row_dict
     }
@@ -233,6 +236,7 @@ def read_work4(request):
     da = {
         'code': '200',
         'msg': '成功',
+        'fill': 'D6:L8',
         'data': work_data.tolist()
         # 'data': row_dict
     }
@@ -265,7 +269,7 @@ def read_work5(request):
             row_dict[row_num] = row
 
             row_data = []  # 行数据
-            col_list = [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+            col_list = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
             for c in range(len(col_list)):
                 df = row[col_list[c]]
                 if isinstance(df, str):
@@ -284,6 +288,7 @@ def read_work5(request):
     da = {
         'code': '200',
         'msg': '成功',
+        'fill': 'F8:N23',
         'data': work_data.tolist()
     }
     return HttpResponse(json.dumps(da, ensure_ascii=False), content_type="application/json,charset=utf-8")
@@ -335,6 +340,7 @@ def read_work6(request):
     da = {
         'code': '200',
         'msg': '成功',
+        'fill': 'D7:N10',
         'data': work_data.tolist()
         # 'data': row_dict
     }
@@ -387,6 +393,7 @@ def read_work7(request):
     da = {
         'code': '200',
         'msg': '成功',
+        'fill': 'C7:J10',
         'data': work_data.tolist()
         # 'data': row_dict
     }
@@ -416,6 +423,7 @@ def write_excel(request):
         'msg': '成功',
         'data': row_dict
     }
+
     return HttpResponse(json.dumps(da, ensure_ascii=False), content_type="application/json,charset=utf-8")
 
 
