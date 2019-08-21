@@ -1,6 +1,6 @@
 from django.db import models
 
-
+# 在 settings.py 中启用模型
 # Create your models here.
 
 class Question(models.Model):
